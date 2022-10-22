@@ -307,10 +307,12 @@
   <h3>{{title}}</h3>
   <h5>Add task</h5>
 
-  <div class="input-group mb-3">
-    <input class="form-control" #newTaskInput (keyup.enter)="add(newTaskInput.value)" type="text">
+  <div class="input-group">
+    <input id="task-input" class="form-control" #newTaskInput (keyup.enter)="add(newTaskInput.value)" type="text">
     <button class="btn btn-info" (click)="add(newTaskInput.value)">add</button>
   </div>
+
+  <p id="error-msg">{{errorMsg}}</p>
 
   <h6>Click on a task to complete</h6>
   <ul class="list-group list-group-flush">
