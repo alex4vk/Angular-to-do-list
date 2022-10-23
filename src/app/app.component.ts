@@ -13,6 +13,7 @@ interface ITask {
 export class AppComponent {
   title = 'To Do List';
   errorMsg: string = '';
+  newTaskInput: string = '';
 
   tasks: ITask[] = [
     {
@@ -41,7 +42,7 @@ export class AppComponent {
     if (title != "") { 
       this.tasks.push( {title: title, complete: false} );
       this.errorMsg = '';
-//      this.newTaskInput = '';
+      this.newTaskInput = ''; 
     } else {
         this.errorMsg = 'Please enter a task name';
     }

@@ -308,8 +308,8 @@
   <h5>Add task</h5>
 
   <div class="input-group">
-    <input id="task-input" class="form-control" #newTaskInput (keyup.enter)="add(newTaskInput.value)" type="text">
-    <button class="btn btn-info" (click)="add(newTaskInput.value)">add</button>
+    <input id="task-input" class="form-control" [(ngModel)]="newTaskInput" (keyup.enter)="add(newTaskInput)" type="text">
+    <button class="btn btn-info" (click)="add(newTaskInput)">add</button>
   </div>
 
   <p id="error-msg">{{errorMsg}}</p>
